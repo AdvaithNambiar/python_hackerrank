@@ -1,0 +1,20 @@
+def minion_game(inp):
+    
+
+    l = len(inp)
+    p1 = 0
+    p2 = 0
+    vowels = ['A', 'E', 'I', 'O', 'U']
+
+    for i in xrange(l):
+        if inp[i] in vowels:
+            p2 += (l - i)
+        else:
+            p1 += (l - i)
+
+    if p1 == p2:
+        print "Draw"
+    elif p1 > p2:
+        print "Stuart {}".format(p1)
+    else:
+        print "Kevin {}".format(p2)
